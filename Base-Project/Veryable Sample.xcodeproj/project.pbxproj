@@ -18,6 +18,7 @@
 		6A948AFB265FF403005A22DA /* VryPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A948AF6265FF403005A22DA /* VryPallete.swift */; };
 		6A948AFF265FF490005A22DA /* UIFont+Vry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A948AFE265FF490005A22DA /* UIFont+Vry.swift */; };
 		6A948B01265FF5CA005A22DA /* ViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A948B00265FF5CA005A22DA /* ViewColor.swift */; };
+		B232AA6829A06843009910A1 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232AA6729A06843009910A1 /* AccountDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6A948AF6265FF403005A22DA /* VryPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VryPallete.swift; sourceTree = "<group>"; };
 		6A948AFE265FF490005A22DA /* UIFont+Vry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Vry.swift"; sourceTree = "<group>"; };
 		6A948B00265FF5CA005A22DA /* ViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewColor.swift; sourceTree = "<group>"; };
+		B232AA6729A06843009910A1 /* AccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetails.swift; sourceTree = "<group>"; };
 		B65FE61971F35C89FD901862 /* Pods-Veryable Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Veryable Sample.release.xcconfig"; path = "Target Support Files/Pods-Veryable Sample/Pods-Veryable Sample.release.xcconfig"; sourceTree = "<group>"; };
 		CDFCC6589E8234DDBAFB6174 /* Pods_Veryable_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Veryable_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6A948AED265FF0E5005A22DA /* Account.swift */,
+				B232AA6729A06843009910A1 /* AccountDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				6A948B01265FF5CA005A22DA /* ViewColor.swift in Sources */,
 				6A948AEE265FF0E5005A22DA /* Account.swift in Sources */,
 				6A948AFF265FF490005A22DA /* UIFont+Vry.swift in Sources */,
+				B232AA6829A06843009910A1 /* AccountDetails.swift in Sources */,
 				6A948AE7265FEFDB005A22DA /* AccountListView.swift in Sources */,
 				6A948AEC265FF0A2005A22DA /* AccountRepo.swift in Sources */,
 				6A948AFB265FF403005A22DA /* VryPallete.swift in Sources */,
@@ -424,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = V4PME44294;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Veryable Sample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = V4PME44294;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Veryable Sample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
