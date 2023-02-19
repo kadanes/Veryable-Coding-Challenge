@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 @objc protocol AccountDetailsViewDelegate: AnyObject {
     func navigateBack()
@@ -53,6 +54,7 @@ class AccountDetailsView: UIView {
         accountNameLabel.set(VCustomGrey.dark.color, .vryAvenirNextDemiBold(16))
         accountNameLabel.text = accountInfo.account_name
         accountNameLabel.textAlignment = .center
+        
         accountDescriptionLabel.set(VCustomGrey.normal.color, .vryAvenirNextRegular(14))
         accountDescriptionLabel.text = accountInfo.desc
         accountDescriptionLabel.textAlignment = .center
@@ -68,18 +70,22 @@ class AccountDetailsView: UIView {
         icon.tintColor = VBlue.normal.color
         icon.image = iconImage
         
+        let setLabelConstraints: (ConstraintMaker) -> () = {
+            $0.height.equalTo(20)
+            $0.left.equalToSuperview().offset(10)
+            $0.right.equalToSuperview().offset(-10)
+        }
+        
         accountNameLabel.snp.makeConstraints {
             $0.top.equalTo(icon.snp.bottom).offset(10)
-            $0.height.equalTo(20)
-            $0.left.equalToSuperview().offset(10)
-            $0.right.equalToSuperview().offset(-10)
+            setLabelConstraints($0)
         }
+        
         accountDescriptionLabel.snp.makeConstraints {
             $0.top.equalTo(accountNameLabel.snp.bottom).offset(0)
-            $0.height.equalTo(20)
-            $0.left.equalToSuperview().offset(10)
-            $0.right.equalToSuperview().offset(-10)
+            setLabelConstraints($0)
         }
+        
         doneButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-20)
             $0.centerX.equalToSuperview()
@@ -94,8 +100,8 @@ class AccountDetailsView: UIView {
         
         let topBorder = UIView()
         containerView.addSubview(topBorder)
-        let borderWidth = 0.5
         
+        let borderWidth = 0.5
         topBorder.backgroundColor = VCustomGrey.normal.color
         topBorder.snp.makeConstraints {
             $0.top.width.equalToSuperview()

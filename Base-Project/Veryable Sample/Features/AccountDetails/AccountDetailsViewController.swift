@@ -11,7 +11,7 @@ import UIKit
 
 class AccountDetailsViewController: UIViewController {
     
-    let accountInfo: AccountInfo
+    private let accountInfo: AccountInfo
     
     init(info: AccountInfo) {
         self.accountInfo = info

@@ -60,7 +60,6 @@ class AccountDetailsCell: UITableViewCell {
         let setLabelConstraints: (ConstraintMaker) -> () = {
             $0.left.equalTo(self.icon.snp.right).offset(10)
             $0.right.equalToSuperview().offset(10)
-            $0.width.equalTo(100)
             $0.height.equalTo(20)
         }
         

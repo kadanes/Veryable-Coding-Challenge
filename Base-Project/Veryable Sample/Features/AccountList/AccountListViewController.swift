@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class AccountListViewController: UIViewController {
-    //MARK: Public API
+
     private let dataLoader = AccountRepo()
 
     private var accountInfo = [[AccountInfo]]() {
@@ -31,6 +31,7 @@ class AccountListViewController: UIViewController {
         dataLoader.getAccountList {[weak self] downloadDetails in
             switch downloadDetails {
             case .success(let accInfo):
+                NSLog("Finished loading account details - \(accInfo.count) entries")
                 let bankDetails = accInfo.filter { $0.account_type == .bank }
                 let cardDetails = accInfo.filter { $0.account_type == .card }
                 self?.accountInfo = [bankDetails, cardDetails]
@@ -46,8 +47,6 @@ class AccountListViewController: UIViewController {
     override func loadView() {
         view = customView
     }
-
-    //MARK: Private members
 
     //MARK: Lazy Loads
     private lazy var customView: AccountListView = {

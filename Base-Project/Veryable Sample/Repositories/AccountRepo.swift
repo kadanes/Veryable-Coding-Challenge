@@ -23,10 +23,9 @@ class AccountRepo {
         
         AF.request(url).response { [weak self] response in
             guard let `self` = self else { return }
-            
-            print("Finished requesting account info: ", response)
-            
-            guard let data = response.data else { completion(.failure(AccountFetchErrors.MissingData))
+                        
+            guard let data = response.data else {
+                completion(.failure(AccountFetchErrors.MissingData))
                 return
             }
             
@@ -39,7 +38,6 @@ class AccountRepo {
         }
     }
 }
-
 
 enum AccountFetchErrors: Error {
     case URLEncodingFailed
