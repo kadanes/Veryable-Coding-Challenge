@@ -44,6 +44,7 @@ public enum VGrey: VColor {
     }
 }
 
+// Using hex codes specified in wireframe doc to get colors (https://www.uicolor.io/)
 public enum VCustomGrey: VColor {
     case normal, dark, light
     public var color: UIColor {

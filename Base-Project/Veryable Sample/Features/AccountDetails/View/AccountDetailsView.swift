@@ -91,6 +91,16 @@ class AccountDetailsView: UIView {
         doneButton.setTitle("DONE", for: .normal)
         doneButton.backgroundColor = VBlue.normal.color
         doneButton.addTarget(self, action: #selector(navigateBack), for: .touchUpInside)
+        
+        let topBorder = UIView()
+        containerView.addSubview(topBorder)
+        let borderWidth = 0.5
+        
+        topBorder.backgroundColor = VCustomGrey.normal.color
+        topBorder.snp.makeConstraints {
+            $0.top.width.equalToSuperview()
+            $0.height.equalTo(borderWidth)
+        }
     }
     
     // Accessing delegate function as #selector(delegate?.navigateBack) was causing a crash with
