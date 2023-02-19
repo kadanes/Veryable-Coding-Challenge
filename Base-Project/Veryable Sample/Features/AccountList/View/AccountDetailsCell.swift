@@ -45,7 +45,8 @@ class AccountDetailsCell: UITableViewCell {
             $0.width.height.equalTo(25)
         }
         
-        arrow.image = UIImage(named: "arrow")
+        arrow.image = UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate)
+        arrow.tintColor = VCustomGrey.normal.color
         arrow.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.right.equalToSuperview().offset(-10)
@@ -89,11 +90,4 @@ class AccountDetailsCell: UITableViewCell {
         icon.image = iconImage
     }
 
-}
-
-private extension UILabel {
-    func set(_ textColor: UIColor,_ font: UIFont) {
-        self.textColor = textColor
-        self.font = font
-    }
 }

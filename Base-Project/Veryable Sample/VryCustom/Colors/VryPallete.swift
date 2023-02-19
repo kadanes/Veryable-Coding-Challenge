@@ -45,11 +45,12 @@ public enum VGrey: VColor {
 }
 
 public enum VCustomGrey: VColor {
-    case normal, dark
+    case normal, dark, light
     public var color: UIColor {
         switch self {
-            case .normal: return UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 1.00)
-            case .dark: return UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1.00)
+            case .normal: return UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 1.00) // #7e7e7e
+            case .dark: return UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1.00) // #4a4a4a
+            case .light: return UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00) // #F5F5F5
         }
     }
 }

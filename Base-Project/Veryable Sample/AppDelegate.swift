@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(
             rootViewController: AccountListViewController()
         )
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: VCustomGrey.normal.color]
+        UINavigationBar.appearance().tintColor = VCustomGrey.normal.color
+
         window?.makeKeyAndVisible()
 
         return true

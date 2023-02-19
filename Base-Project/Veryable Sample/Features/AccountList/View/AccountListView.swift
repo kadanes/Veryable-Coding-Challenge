@@ -30,6 +30,7 @@ class AccountListView: UIView {
 
     // MARK: UI setup
     private func setup() {
+        backgroundColor = .white
         tableView.register(AccountDetailsCell.self, forCellReuseIdentifier: AccountDetailsCell.identifier)
         if #available(iOS 15.0, *) {
             // Looks like iOS 15 introduced this top padding.
@@ -43,8 +44,9 @@ class AccountListView: UIView {
 
     private func constrain() {
         tableView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.left.right.bottom.equalToSuperview()
-            $0.width.height.equalTo(self)
+            $0.width.equalTo(self)
         }
     }
 }

@@ -91,5 +91,12 @@ extension AccountListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 80 }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 30 }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let details = accountInfo[indexPath.section][indexPath.row]
+        let detailsView = AccountDetailsViewController(info: details)
+        navigationController?.pushViewController(detailsView, animated: true)
+    }
 
 }

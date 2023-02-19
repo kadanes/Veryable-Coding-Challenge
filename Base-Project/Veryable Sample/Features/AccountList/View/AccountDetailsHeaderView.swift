@@ -27,9 +27,9 @@ class AccountDetailsHeaderView: UIView {
             $0.bottom.right.equalToSuperview().offset(-5)
         }
         
-        backgroundColor = VGrey.light.color
+        backgroundColor = VCustomGrey.light.color
         
-        label.text = ["Bank", "Card"][section]
+        label.text = ["Bank Accounts", "Cards"][section]
         label.font = .vryAvenirNextDemiBold(15)
         label.textColor = VCustomGrey.dark.color
         
