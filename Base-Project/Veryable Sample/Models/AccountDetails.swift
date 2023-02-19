@@ -10,6 +10,16 @@ import Foundation
 
 
 enum AccountType: String, Codable {
+    
+    var description: String {
+        switch self {
+        case .bank:
+            return "Bank Account: ACH - Same Day"
+        case .card:
+            return "Card: Instant"
+        }
+    }
+    
     case bank = "bank"
     case card = "card"
 }
